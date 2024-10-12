@@ -1,3 +1,19 @@
+# tnr-app
+
+A web application that is designed to facilitate the trap, neuter and return of stray cats
+
+TNR website requirements:
+
+https://docs.google.com/document/d/1xCqsJ4U1l4xTAhlT8QEj8gRE4w-Gnm9XUMOQZn88UBo/edit?usp=sharing
+
+Wireframe mobile draft:
+
+https://drive.google.com/file/d/1CPXHke1rWnJ80PRDQyEvyxC86t8Mh1Tw/view?usp=sharing
+
+Trello Board:
+
+https://trello.com/b/uchiFKxN/tnr-app
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
