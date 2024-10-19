@@ -3,8 +3,13 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import RandomFacts from './random-facts';
+import { useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
+import '@/utils/i18n/i18n';
 
 export default function Intro() {
+  const { t } = useTranslation();
+
   return (
     <section
       id='intro'
@@ -57,10 +62,10 @@ export default function Intro() {
         }}
       >
         <button className='bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>
-          Login
-        </button>{' '}
+          {t('loginButton')}
+        </button>
         <button className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10'>
-          List of Cats
+          <Trans i18nKey='catListButton' />
         </button>
       </motion.div>
     </section>
