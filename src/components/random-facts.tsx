@@ -28,7 +28,7 @@ export default function RandomFacts() {
   return (
     <motion.div
       key={index}
-      className='flex items-center justify-center border-2 overflow-hidden rounded-xl border-black/5 border-gray-900 py-2 px-4 w-[40rem] h-[4rem] bg-white dark:bg-white/10 dark:text-white mb-8 transition-colors'
+      className='flex items-center justify-center border-2 overflow-hidden rounded-xl border-black/10 border-gray-900 py-2 px-4 w-[40rem] h-[4rem] bg-white dark:bg-white/10 dark:text-white mb-8 transition-colors'
       initial={{ opacity: 0, x: 150 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
