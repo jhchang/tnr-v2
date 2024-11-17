@@ -1,0 +1,10 @@
+{
+  "Login": {
+    "title": "Welcome to the Login Page",
+    "homepageLink": "Click to go to Homepage"
+  },
+  "NotFoundPage": {
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+    "title": "Page not found"
+  }
+}
