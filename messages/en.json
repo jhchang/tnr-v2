@@ -6,5 +6,15 @@
   "NotFoundPage": {
     "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
     "title": "Page not found"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ar {🇸🇦 العربية} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Intro": {
+    "goal": "Company Goal",
+    "missionStatment": "Mission Statment",
+    "login": "Login",
+    "catList": "List of Cats"
   }
 }

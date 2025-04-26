@@ -6,5 +6,15 @@
   "NotFoundPage": {
     "description": "يرجى التحقق مرة أخرى من شريط عنوان المتصفح أو استخدام التنقل للانتقال إلى صفحة معروفة.",
     "title": "لم يتم العثور على الصفحة"
+  },
+  "LocaleSwitcher": {
+    "label": "تغيير اللغة",
+    "locale": "{locale, select, ar {🇸🇦 العربية} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Intro": {
+    "goal": "هدف الشركة",
+    "missionStatment": "بيان المهمة",
+    "login": "تسجيل الدخول",
+    "catList": "قائمة القطط"
   }
 }

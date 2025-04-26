@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import RandomFacts from './random-facts';
+import { useTranslations } from 'next-intl';
 
 export default function Intro() {
+  const t = useTranslations('Intro');
+
   return (
     <section
       id='intro'
@@ -31,7 +34,7 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        Gompany Goal
+        {t('goal')}
       </motion.h1>
       <motion.h1
         className='text-right mb-10 mt-4 px-4 text-xl font-bold !leading-[1.5] sm:text-2xl'
@@ -43,7 +46,7 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        Mission Statement
+        {t('missionStatment')}
       </motion.h1>
 
       <RandomFacts />
@@ -57,10 +60,10 @@ export default function Intro() {
         }}
       >
         <button className='bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>
-          Login
+          {t('login')}
         </button>
         <button className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10'>
-          List of Cats
+          {t('catList')}
         </button>
       </motion.div>
     </section>
