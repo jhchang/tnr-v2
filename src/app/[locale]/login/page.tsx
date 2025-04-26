@@ -6,8 +6,17 @@ export default function Page() {
 
   return (
     <>
-      <h1>{t('title')}</h1>
-      <Link href='/'>{t('homepageLink')}</Link>
+      <h1 className='text-center mb-[5rem] mt-4 px-4 text-4xl font-bold !leading-[1.5] sm:text-7xl'>
+        {t('title')}
+      </h1>
+      <div className='flex justify-center'>
+        <Link
+          className='bg-white px-7 py-3 items-center justify-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10'
+          href='/'
+        >
+          {t('homepageLink')}
+        </Link>
+      </div>
     </>
   );
 }
