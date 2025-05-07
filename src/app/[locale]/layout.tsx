@@ -6,7 +6,13 @@ import '../globals.css';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import { getMessages } from 'next-intl/server';
-import { NextIntlClientProvider } from 'next-intl';
+import { Locale, NextIntlClientProvider } from 'next-intl';
+import { ReactNode } from 'react';
+
+type Props = {
+  children: ReactNode;
+  params: Promise<{ locale: Locale }>;
+};
 
 export const metadata: Metadata = {
   title: 'TNR | Save a life',
@@ -14,13 +20,8 @@ export const metadata: Metadata = {
     'Uniting the community for the trap, neuter, and return of local strays',
 };
 
-export default async function RootLayout({
-  children,
-  params: { locale },
-}: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string };
-}>) {
+export default async function RootLayout({ children, params }: Props) {
+  const { locale } = await params;
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as any)) {
     notFound();
