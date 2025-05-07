@@ -5,12 +5,15 @@ import React from 'react';
 import RandomFacts from './random-facts';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { useSectionInView } from '@/lib/hooks';
 
 export default function Intro() {
+  const { ref } = useSectionInView('Intro');
   const t = useTranslations('Intro');
 
   return (
-    <section
+    <motion.section
+      ref={ref}
       id='intro'
       className='mb-28 max-w-[50rem] sm:mb-0 scroll-mt-[100rem]'
     >
@@ -61,7 +64,7 @@ export default function Intro() {
         }}
       >
         <Link
-          className='bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+          className='bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-gray-500'
           href='/login'
         >
           {t('login')}
@@ -70,6 +73,6 @@ export default function Intro() {
           {t('catList')}
         </button>
       </motion.div>
-    </section>
+    </motion.section>
   );
 }
