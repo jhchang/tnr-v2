@@ -8,8 +8,8 @@ import { notFound } from 'next/navigation';
 import { getMessages } from 'next-intl/server';
 import { Locale, NextIntlClientProvider } from 'next-intl';
 import { ReactNode } from 'react';
-import Header from '@/components/header';
 import ActiveSectionContextProvider from '@/context/active-section-context';
+import LocaleSwitcher from '@/components/LocaleSwitcher';
 
 type Props = {
   children: ReactNode;
@@ -43,7 +43,7 @@ export default async function RootLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           <ThemeContextProvider>
             <ActiveSectionContextProvider>
-              <Header />
+              <LocaleSwitcher />
               {children}
               <ThemeSwitch />
             </ActiveSectionContextProvider>

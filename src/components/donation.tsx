@@ -7,7 +7,7 @@ import { useRef } from 'react';
 import { useSectionInView } from '@/lib/hooks';
 
 export default function Donation() {
-  const { ref } = useSectionInView('Donation', 0.5);
+  const { ref } = useSectionInView('Donation', 0.9);
   const reff = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: reff,
