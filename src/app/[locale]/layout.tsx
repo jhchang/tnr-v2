@@ -10,6 +10,7 @@ import { Locale, NextIntlClientProvider } from 'next-intl';
 import { ReactNode } from 'react';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
+import { SessionProvider } from 'next-auth/react';
 
 type Props = {
   children: ReactNode;
@@ -40,15 +41,17 @@ export default async function RootLayout({ children, params }: Props) {
       >
         <div className='bg-[#d7dbfc] absolute top-[-6rem] -z-10 right-[1rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#9474629d]'></div>
         <div className='bg-[#fbead7] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394bd]'></div>
-        <NextIntlClientProvider messages={messages}>
-          <ThemeContextProvider>
-            <ActiveSectionContextProvider>
-              <LocaleSwitcher />
-              {children}
-              <ThemeSwitch />
-            </ActiveSectionContextProvider>
-          </ThemeContextProvider>
-        </NextIntlClientProvider>
+        <SessionProvider>
+          <NextIntlClientProvider messages={messages}>
+            <ThemeContextProvider>
+              <ActiveSectionContextProvider>
+                <LocaleSwitcher />
+                {children}
+                <ThemeSwitch />
+              </ActiveSectionContextProvider>
+            </ThemeContextProvider>
+          </NextIntlClientProvider>
+        </SessionProvider>
       </body>
     </html>
   );

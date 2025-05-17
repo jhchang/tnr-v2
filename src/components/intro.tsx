@@ -6,10 +6,12 @@ import RandomFacts from './random-facts';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { useSectionInView } from '@/lib/hooks';
+import { useSession } from 'next-auth/react';
 
 export default function Intro() {
   const { ref } = useSectionInView('Intro');
   const t = useTranslations('Intro');
+  const { data: session, status } = useSession();
 
   return (
     <motion.section
@@ -63,12 +65,22 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <Link
-          className='bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-gray-500'
-          href='/login'
-        >
-          {t('login')}
-        </Link>
+        {status === 'authenticated' ? (
+          // <p>Signed in as {session.user?.email}</p>
+          <Link
+            className='bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-gray-500'
+            href='/login'
+          >
+            {t('logout')}
+          </Link>
+        ) : (
+          <Link
+            className='bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-gray-500'
+            href='/login'
+          >
+            {t('login')}
+          </Link>
+        )}
         <button className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10'>
           {t('catList')}
         </button>

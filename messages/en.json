@@ -1,7 +1,11 @@
 {
   "Login": {
     "title": "Welcome to the Login Page",
-    "homepageLink": "Click to go to Homepage"
+    "homepageLink": "Click to go to Homepage",
+    "logout": "Logout",
+    "login": "Login",
+    "authMsg": "You are not authenticated. Click below to sign in",
+    "welcome": "Welcome"
   },
   "NotFoundPage": {
     "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
@@ -15,6 +19,7 @@
     "goal": "Company Goal",
     "missionStatment": "Mission Statment",
     "login": "Login",
+    "logout": "Logout",
     "catList": "List of Cats"
   }
 }
