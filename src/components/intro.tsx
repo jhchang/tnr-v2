@@ -18,7 +18,7 @@ export default function Intro() {
       className='mb-28 max-w-[50rem] sm:mb-0 scroll-mt-[100rem]'
     >
       <motion.h1
-        className='text-center mb-[5rem] mt-4 px-4 text-4xl font-bold !leading-[1.5] sm:text-7xl'
+        className='text-center mb-[5rem] mt-4 px-4 text-6xl font-bold !leading-[1.5] sm:text-7xl'
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -29,7 +29,7 @@ export default function Intro() {
         Community TNR
       </motion.h1>
       <motion.h1
-        className='text-right mb-10 mt-4 px-4 text-2xl font-bold !leading-[1.5] sm:text-4xl'
+        className='text-center mb-10 mt-4 px-4 text-2xl font-bold !leading-[1.5] sm:text-4xl sm:text-right'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -41,7 +41,7 @@ export default function Intro() {
         {t('goal')}
       </motion.h1>
       <motion.h1
-        className='text-right mb-10 mt-4 px-4 text-xl font-bold !leading-[1.5] sm:text-2xl'
+        className='text-center mb-10 mt-4 px-4 text-xl font-bold !leading-[1.5] sm:text-2xl sm:text-right'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
