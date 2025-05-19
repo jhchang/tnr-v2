@@ -1,4 +1,5 @@
 import Header from '@/components/header';
+import MobileHeader from '@/components/mobile-header';
 import { ReactNode } from 'react';
 
 type Props = {
@@ -11,6 +12,7 @@ export default function RootLayout({ children }: Props) {
   return (
     <>
       <Header />
+      <MobileHeader />
       {children}
     </>
   );
